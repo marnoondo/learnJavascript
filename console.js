@@ -1,9 +1,9 @@
-function student(name,age){
+function Student(name,age){
     this.name=name;
     this.age=age;
 }
-student.prototype.run=function (){
+Student.prototype.run=function (){
     console.log('running')
 }
-var xiaoming=new student('小明',13)
+var xiaoming=new Student('小明',13)
 console.log(xiaoming.__proto__)
