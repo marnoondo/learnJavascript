@@ -19,10 +19,18 @@
 //         $(this).next().toggle();  
 //     })
 // })
-$(function(){
-    $('#panel h5.head').toggle(function(){
-        $(this).next().fadeOut()
-    },function(){
-        $(this).next().fadeIn()
-    });
-})
+// $(function(){
+//     $('#panel h5.head').toggle(function(){
+//         $(this).next().show();
+//     },function(){
+//         $(this).next().hide();
+//     })
+// });
+$(function () {
+    $("#panel h5.head").click(function (event) {
+        $(this).next().toggle(500,function(){
+            alert(1)
+        },false)
+    })
+
+});
