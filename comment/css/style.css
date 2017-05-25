@@ -1,0 +1,10 @@
+.bigger {
+    width:100px;
+    height:30px;
+    border:6px solid black;
+}
+.smaller {
+    width:100px;
+    height:30px;
+    border:1px solid black;
+}
