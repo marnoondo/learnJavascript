@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/c1.css" />
+	</head>
+	<body>
+		<div id="bg">
+			<div id="phone">
+				<div id="earphone"></div>
+				<div id="screen">
+					<div id="display">
+						
+					</div>
+					<div id="enter">
+						<a id="a1">
+							<img id="imghead" src="img/lico.png" />
+						</a>
+						<input type="text" id="text" value=""/>
+						<input type="button" id="btn" value="发送"/>
+						<script>
+							//需求1.text.focus
+							//1.5获取变量
+							//2.没有文字填写的情况下，弹出请写点东西
+							//3.左下角的图片的来回切换
+							//4.text框中填写文字
+							//5.选中text框中的文字以及左边的头像一起交给上面的内容区域
+							//6.能够依次显示
+							//7.蓝色头像显示在左边
+							//8.红色头像显示在右边
+							//9.需要添加的情况继续往后写
+							var text = document.getElementById('text');
+							var btn =document.querySelector('#btn');
+							var imghead=document.getElementById('imghead');
+							var display=document.getElementById('display');
+							var flag=true;
+							text.focus();
+							imghead.onclick=function() {
+								if(flag) {
+									imghead.src='img/rico.png';
+									flag=false;
+								}else if (flag==false) {
+									imghead.src='img/lico.png';
+									flag=true;
+								}  
+								
+								text.focus();
+							};
+							btn.onclick =function () {
+								var val=text.value;
+								var pic=imghead.src;
+								var person;
+								if(text.value=='') {
+									alert('请填写内容，亲')
+								}else {
+									if(flag) {
+										//显示在左边
+										person='lico';
+									}else {
+										//显示在右边
+										person='rico';
+										
+									}
+//									display.innerHTML='<div>'+'<img src="img/'+person+'.png"/>' +'<span id="aaa">'+val+'</span>' +' tx.innerHTML'+</div>';
+ 									display.innerHTML='<div id="'+person+'">'+'<img src="img/'+person+'.png">'+'<span id="aaa">'+val+'</span>'+display.innerHTML+'</div>';
+								}
+							};	
+						</script>
+					</div>
+				</div>
+				<div id="button"></div>
+			</div>
+		</div>
+	</body>
+</html>

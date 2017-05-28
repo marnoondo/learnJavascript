@@ -1,0 +1,35 @@
+// @nice-blue:#5B83AD;
+// @light-blue:@nice-blue + #111;
+// @hezi:box;
+// @gao:width;
+// .bordered {
+//     border-top:dotted 3px black;
+//     border-bottom:solid 2px black;
+// }
+// .@{hezi} {
+//     @{gao}:600px;
+//     height:300px;
+//     border:5px solid black;
+//     background:@light-blue;
+//     .bordered;
+// }
+#header {
+    display:inline;
+    float:left;
+    h1 {
+        font-size:26px;
+        font-weight:bold;
+        a {
+            text-decoration: none;
+            color:#f36;
+            &:hover {
+                text-decoration: underline;
+                color:#63f;
+
+            }
+        }
+        p {
+            font-size:12px;
+        }
+    }
+}

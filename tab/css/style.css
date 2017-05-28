@@ -1,0 +1,11 @@
+.tab_box div{
+    width:100px;
+    height:100px;
+    border:1px solid black;
+}
+.hide {
+    display:none;
+}
+.selected {
+    background:blue;
+}
